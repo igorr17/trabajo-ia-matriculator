@@ -1,50 +1,53 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matriculator - Propuesta de IA y Lenguajes</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; line-height: 1.6; }
-        header { background-color: #004080; color: white; padding: 40px 20px; text-align: center; }
-        .container { max-width: 1000px; margin: 30px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        h1, h2, h3 { color: #004080; }
-        h2 { border-bottom: 2px solid #004080; padding-bottom: 8px; margin-top: 40px; }
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
-        th { background-color: #004080; color: white; }
-        tr:nth-child(even) { background-color: #f9f9f9; }
-        .highlight { background-color: #e6f0ff; padding: 15px; border-left: 4px solid #004080; margin: 20px 0; }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Matriculator: Sistema de Reconocimiento de Matrículas</h1>
-        <p>Desarrollo técnico y análisis de lenguajes para Inteligencia Artificial</p>
-    </header>
-
-    <div class="container">
-        
-        <h2>1. Introducción y Caso de Uso (Paso 1)</h2>
-        <p><strong>Matriculator</strong> es una aplicación hipotética diseñada para automatizar el acceso a aparcamientos mediante la detección y lectura de matrículas en imágenes de cámaras de seguridad[cite: 1]. Su objetivo es agilizar el flujo de vehículos y reducir el error humano, manteniendo estrictas políticas de privacidad sin almacenar datos personales innecesarios[cite: 1].</p>
-
-        <h2>2. Comparativa de Lenguajes y Google Trends (Paso 2)</h2>
+<h2>2. Comparativa de Lenguajes y Decisiones (Paso 2)</h2>
         
         <h3>Análisis de Interés Global (Google Trends)</h3>
-        <p>A partir de los datos exportados en formato CSV (alojados en la carpeta <code>data/</code> del repositorio)[cite: 1], se ha evaluado el interés de búsqueda global y en YouTube de los lenguajes evaluados (*Python, JavaScript, R, C++, PHP y Java*)[cite: 1]. Los gráficos demuestran un claro liderazgo de Python en el sector de la inteligencia artificial y la ciencia de datos en comparación con el resto de alternativas.</p>
-        
-        <div class="highlight">
-            <p><strong>Nota técnica:</strong> El gráfico interactivo generado a partir de <code>trends.csv</code> se visualiza dinámicamente en esta sección de la web estática[cite: 1].</p>
-        </div>
+        <p>A partir de los ficheros CSV alojados en <code>data/</code>, se observa que <strong>Python</strong> lidera de forma aplastante el interés global en búsquedas web y YouTube para Inteligencia Artificial, mientras que lenguajes como JavaScript o Java se mantienen en entornos web y de sistemas tradicionales.</p>
 
-        <h3>Estudio de Características</h3>
-        <p>Para un entorno de visión artificial y OCR, <strong>Python</strong> destaca por su enorme ecosistema de librerías especializadas (OpenCV, EasyOCR). Por su parte, JavaScript ofrece un gran rendimiento web, mientras que C++ aporta velocidad pero con una complejidad de desarrollo muy elevada para prototipos de IA.</p>
+        <h3>Características Fundamentales de los Lenguajes</h3>
+        <ul>
+            <li><strong>Facilidad de aprendizaje y legibilidad:</strong> <strong>Python</strong> destaca por su sintaxis limpia y sencilla, ideal para desarrollos rápidos[cite: 1]. C++ y Java tienen una curva mucho más pronunciada.</li>
+            <li><strong>Análisis estadístico:</strong> <strong>R</strong> es el referente indiscutible para estadística avanzada[cite: 1], aunque limitado para producción general de IA.</li>
+            <li><strong>Mantenimiento e integración:</strong> JavaScript y Python ofrecen una excelente compatibilidad con APIs, web y bases de datos[cite: 1]. PHP queda relegado a entornos web clásicos.</li>
+        </ul>
+
+        <h3>Tabla de Bibliotecas para IA y Datos</h3>
+        <table>
+            <tr>
+                <th>Lenguaje</th>
+                <th>Bibliotecas principales para IA y Datos</th>
+                <th>Enfoque principal</th>
+            </tr>
+            <tr>
+                <td><strong>Python</strong></td>
+                <td>OpenCV, EasyOCR, TensorFlow, PyTorch, Pandas, NumPy</td>
+                <td>Visión artificial, Deep Learning y Ciencia de Datos</td>
+            </tr>
+            <tr>
+                <td><strong>R</strong></td>
+                <td>caret, randomForest, ggplot2</td>
+                <td>Estadística y análisis de datos académicos</td>
+            </tr>
+            <tr>
+                <td><strong>JavaScript</strong></td>
+                <td>TensorFlow.js</td>
+                <td>IA en navegador / Interfaces web</td>
+            </tr>
+            <tr>
+                <td><strong>C++</strong></td>
+                <td>OpenCV (nativo), Dlib</td>
+                <td>Alto rendimiento en tiempo real</td>
+            </tr>
+            <tr>
+                <td><strong>Java / PHP</strong></td>
+                <td>Weka (Java) / Sin librerías nativas de peso (PHP)</td>
+                <td>Entornos empresariales y web clásica</td>
+            </tr>
+        </table>
 
         <h3>Matriz de Decisión</h3>
         <table>
             <tr>
-                <th>Criterio de Idoneidad</th>
+                <th>Criterio</th>
                 <th>Python</th>
                 <th>JavaScript</th>
                 <th>C++</th>
@@ -53,60 +56,53 @@
                 <th>R</th>
             </tr>
             <tr>
-                <td><strong>Facilidad / Legibilidad</strong></td>
-                <td>Alta</td>
-                <td>Alta</td>
-                <td>Baja</td>
-                <td>Media</td>
-                <td>Media</td>
-                <td>Media</td>
-            </tr>
-            <tr>
-                <td><strong>Rendimiento de Ejecución</strong></td>
-                <td>Medio-Alto</td>
-                <td>Medio</td>
-                <td>Muy Alto</td>
+                <td><strong>Facilidad / Aprendizaje</strong></td>
                 <td>Alto</td>
+                <td>Alto</td>
+                <td>Bajo</td>
+                <td>Medio</td>
                 <td>Medio</td>
                 <td>Medio</td>
             </tr>
             <tr>
-                <td><strong>Librerías de IA / OCR</strong></td>
+                <td><strong>Análisis Estadístico</strong></td>
+                <td>Alto</td>
+                <td>Bajo</td>
+                <td>Bajo</td>
+                <td>Bajo</td>
+                <td>Bajo</td>
                 <td><strong>Excelente</strong></td>
-                <td>Limitado</td>
+            </tr>
+            <tr>
+                <td><strong>Ecosistema de IA</strong></td>
+                <td><strong>Excelente</strong></td>
+                <td>Medio</td>
                 <td>Alto</td>
                 <td>Bajo</td>
                 <td>Nulo</td>
-                <td>Bajo-Medio</td>
+                <td>Medio</td>
             </tr>
             <tr>
-                <td><strong>Integración Web y APIs</strong></td>
-                <td>Alta</td>
+                <td><strong>Despliegue y Web</strong></td>
+                <td>Alto</td>
                 <td>Excelente</td>
-                <td>Baja</td>
-                <td>Alta</td>
-                <td>Alta</td>
-                <td>Baja</td>
-            </tr>
-            <tr>
-                <td><strong>Despliegue en Producción (IA)</strong></td>
-                <td><strong>Óptimo</strong></td>
-                <td>Complejo</td>
-                <td>Complejo</td>
-                <td>Pesado</td>
-                <td>No apto</td>
-                <td>No apto</td>
+                <td>Medio</td>
+                <td>Alto</td>
+                <td>Alto</td>
+                <td>Bajo</td>
             </tr>
         </table>
 
-        <h3>Decisiones Finales Justificadas</h3>
+        <h3>Cierre y Decisiones Tomadas</h3>
         <ul>
-            <li><strong>Lenguaje principal para la aplicación:</strong> <strong>Python</strong>[cite: 1]. Permite gestionar tanto la lógica de la interfaz web (mediante frameworks ligeros) como el backend de manera unificada.</li>
-            <li><strong>Lenguaje principal para la IA:</strong> <strong>Python</strong>[cite: 1]. Es el estándar indiscutible gracias a la disponibilidad inmediata de modelos preentrenados de visión artificial.</li>
-            <li><strong>Descarte de alternativas:</strong> Se descarta C++ por su excesiva complejidad en el desarrollo de capas de aplicación, y Java, PHP o R por la falta de un ecosistema maduro y nativo orientado a la implementación rápida de modelos de reconocimiento de caracteres[cite: 1].</li>
+            <li><strong>¿Son distintos el lenguaje de la aplicación y el de la IA?</strong> No, en este caso <strong>utilizaremos Python para ambos</strong>. Esto simplifica drásticamente la arquitectura al no tener que comunicar dos backends diferentes.</li>
+            <li><strong>Lenguaje principal elegido:</strong> <strong>Python</strong>[cite: 1], tanto para la lógica general de la aplicación web como para el motor de reconocimiento óptico y visión artificial.</li>
+            <li><strong>¿Por qué se descartan los demás?</strong> 
+                <ul>
+                    <li><em>C++:</em> Se descarta por su alta complejidad y tiempo de desarrollo excesivo para los objetivos del proyecto.</li>
+                    <li><em>R:</em> Se descarta porque, aunque excelente en estadística[cite: 1], carece de la versatilidad de Python para integrar modelos de visión artificial en una aplicación web en producción.</li>
+                    <li><em>Java y PHP:</em> Se descartan por la ausencia de un ecosistema nativo y maduro para modelos de IA y OCR.</li>
+                    <li><em>JavaScript:</em> Aunque válido para web, se queda atrás frente a Python en la disponibilidad de modelos preentrenados de reconocimiento de matrículas.</li>
+                </ul>
+            </li>
         </ul>
-
-    </div>
-
-</body>
-</html>
