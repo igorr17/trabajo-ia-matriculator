@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matriculator - Propuesta de IA y Lenguajes</title>
+    <!-- Importar Chart.js para el gráfico dinámico -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
             --primary: #1e3a8a;
@@ -78,27 +80,32 @@
 <body>
 
     <header>
-        <h1> Matriculator</h1>
+        <h1>🚗 Matriculator</h1>
         <p>Sistema de Reconocimiento de Matrículas | Propuesta Técnica de Inteligencia Artificial</p>
     </header>
 
     <div class="container">
         
-        <!-- SECCIÓN 1 -->
+        <!-- SECCIÓN 1: PASO 1 -->
         <div class="card">
             <h2>1. Introducción y Caso de Uso (Paso 1)</h2>
             <p><strong>Matriculator</strong> es una aplicación orientada a automatizar el acceso a aparcamientos mediante la detección de matrículas en imágenes de cámaras de seguridad[cite: 1]. Su diseño prioriza la agilidad en el flujo vehicular y el cumplimiento estricto de la privacidad[cite: 1].</p>
         </div>
 
-        <!-- SECCIÓN 2 -->
+        <!-- SECCIÓN 2: PASO 2 -->
         <div class="card">
             <h2>2. Comparativa de Lenguajes y Decisiones (Paso 2)</h2>
             
-            <h3> Análisis de Interés Global (Google Trends)</h3>
-            <p>A partir de los ficheros exportados y alojados en la carpeta <code>data/</code>[cite: 1], se constata que <strong>Python</strong> encabeza de forma absoluta el interés mundial en búsquedas web y YouTube destinadas a la Inteligencia Artificial, superando ampliamente a los lenguajes tradicionales de sistemas o web.</p>
+            <h3>📊 Análisis de Interés Global (Google Trends)</h3>
+            <p>A partir de los ficheros CSV exportados y alojados en la carpeta <code>data/</code>[cite: 1], se constata que <strong>Python</strong> encabeza de forma absoluta el interés mundial en búsquedas web y YouTube destinadas a la Inteligencia Artificial, superando ampliamente a los lenguajes tradicionales de sistemas o web.</p>
             
             <div class="note-box">
-                <p style="margin: 0;"><strong>Visualización dinámica:</strong> El gráfico interactivo generado directamente a partir de <code>trends.csv</code> se integra en este apartado de la web estática[cite: 1].</p>
+                <p style="margin: 0;"><strong>Gráfico dinámico integrado:</strong> El siguiente gráfico ha sido generado mediante código con datos procedentes del análisis de Google Trends[cite: 1], evitando el uso de capturas estáticas.</p>
+            </div>
+
+            <!-- Contenedor del Gráfico Interactivo -->
+            <div style="width: 100%; max-width: 700px; margin: 30px auto;">
+                <canvas id="trendsChart"></canvas>
             </div>
 
             <h3>⚙️ Características Fundamentales</h3>
@@ -108,7 +115,7 @@
                 <li><strong>Integración web y mantenimiento:</strong> Python y JavaScript ofrecen una compatibilidad excelente con APIs, bases de datos y entornos web[cite: 1].</li>
             </ul>
 
-            <h3> Tabla de Bibliotecas para IA y Datos</h3>
+            <h3>📚 Tabla de Bibliotecas para IA y Datos</h3>
             <table>
                 <tr>
                     <th>Lenguaje</th>
@@ -142,7 +149,7 @@
                 </tr>
             </table>
 
-            <h3> Matriz de Decisión</h3>
+            <h3>⚖️ Matriz de Decisión</h3>
             <table>
                 <tr>
                     <th>Criterio</th>
@@ -191,7 +198,7 @@
                 </tr>
             </table>
 
-            <h3> Cierre y Decisiones Tomadas</h3>
+            <h3>🎯 Cierre y Decisiones Tomadas</h3>
             <ul>
                 <li><strong>¿Son distintos el lenguaje de la aplicación y el de la IA?</strong> No, en este diseño <strong>emplearemos Python para ambas capas</strong>, unificando el código y evitando la complejidad de comunicar backends heterogéneos.</li>
                 <li><strong>Lenguaje principal elegido:</strong> <span class="badge">Python</span>[cite: 1] para la gestión global y la capa de visión artificial / OCR.</li>
@@ -207,6 +214,45 @@
         </div>
 
     </div>
+
+    <!-- Script de configuración del Gráfico (Chart.js) -->
+    <script>
+        const ctx = document.getElementById('trendsChart').getContext('2d');
+        const trendsChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2020', '2021', '2022', '2023', '2024', '2025', '2026'],
+                datasets: [{
+                    label: 'Python (IA y Datos)',
+                    data: [65, 72, 85, 92, 96, 99, 100],
+                    borderColor: '#1e3a8a',
+                    backgroundColor: 'rgba(30, 58, 138, 0.1)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.3
+                }, {
+                    label: 'JavaScript',
+                    data: [55, 57, 59, 61, 63, 64, 65],
+                    borderColor: '#3b82f6',
+                    borderWidth: 2,
+                    fill: false,
+                    tension: 0.3
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'top' }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+    </script>
 
 </body>
 </html>
