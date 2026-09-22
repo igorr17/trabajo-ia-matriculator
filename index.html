@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriculator - Propuesta de IA y Lenguajes</title>
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Librería Chart.js para el gráfico interactivo -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>🚗 Matriculator</h1>
+        <p>Sistema de Reconocimiento de Matrículas | Propuesta Técnica de Inteligencia Artificial</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- SECCIÓN 1 -->
+        <div class="card">
+            <h2>1. Introducción y Caso de Uso (Paso 1)</h2>
+            <p><strong>Matriculator</strong> es una aplicación orientada a automatizar el acceso a aparcamientos mediante la detección de matrículas en imágenes de cámaras de seguridad. Su diseño prioriza la agilidad en el flujo vehicular y el cumplimiento estricto de la privacidad.</p>
+        </div>
+
+        <!-- SECCIÓN 2 -->
+        <div class="card">
+            <h2>2. Comparativa de Lenguajes y Decisiones (Paso 2)</h2>
+            
+            <h3>📊 Análisis de Interés Global (Google Trends)</h3>
+            <p>A partir de los ficheros exportados y alojados en la carpeta <code>data/</code>, se constata que <strong>Python</strong> encabeza de forma absoluta el interés mundial en búsquedas web y YouTube destinadas a la Inteligencia Artificial.</p>
+            
+            <!-- Contenedor del Gráfico Dinámico -->
+            <div class="chart-container">
+                <canvas id="trendsChart"></canvas>
+            </div>
+
+            <h3>⚙️ Características Fundamentales</h3>
+            <ul>
+                <li><strong>Facilidad de aprendizaje y legibilidad:</strong> <span class="badge">Python</span> sobresale por su sintaxis intuitiva y limpia, facilitando un desarrollo rápido y mantenible.</li>
+                <li><strong>Análisis estadístico:</strong> <span class="badge">R</span> se posiciona como el estándar absoluto para el cálculo estadístico avanzado, aunque con menor versatilidad para despliegues de IA en producción.</li>
+                <li><strong>Integración web y mantenimiento:</strong> Python y JavaScript ofrecen una compatibilidad excelente con APIs, bases de datos y entornos web.</li>
+            </ul>
+
+            <h3>📚 Tabla de Bibliotecas para IA y Datos</h3>
+            <table>
+                <tr>
+                    <th>Lenguaje</th>
+                    <th>Bibliotecas Clave (IA y Datos)</th>
+                    <th>Enfoque Principal</th>
+                </tr>
+                <tr>
+                    <td><strong>Python</strong></td>
+                    <td>OpenCV, EasyOCR, TensorFlow, PyTorch, Pandas</td>
+                    <td>Visión artificial, Deep Learning y Ciencia de Datos</td>
+                </tr>
+                <tr>
+                    <td><strong>R</strong></td>
+                    <td>caret, randomForest, ggplot2</td>
+                    <td>Estadística y modelado analítico</td>
+                </tr>
+                <tr>
+                    <td><strong>JavaScript</strong></td>
+                    <td>TensorFlow.js</td>
+                    <td>IA ejecutada en navegadores / Interfaces web</td>
+                </tr>
+                <tr>
+                    <td><strong>C++</strong></td>
+                    <td>OpenCV (nativo), Dlib</td>
+                    <td>Procesamiento de vídeo de ultra bajo nivel</td>
+                </tr>
+                <tr>
+                    <td><strong>Java / PHP</strong></td>
+                    <td>Weka (Java) / Sin librerías nativas de peso (PHP)</td>
+                    <td>Aplicaciones corporativas y web tradicional</td>
+                </tr>
+            </table>
+
+            <h3>⚖️ Matriz de Decisión</h3>
+            <table>
+                <tr>
+                    <th>Criterio</th>
+                    <th>Python</th>
+                    <th>JavaScript</th>
+                    <th>C++</th>
+                    <th>Java</th>
+                    <th>PHP</th>
+                    <th>R</th>
+                </tr>
+                <tr>
+                    <td><strong>Facilidad / Aprendizaje</strong></td>
+                    <td>Alto</td>
+                    <td>Alto</td>
+                    <td>Bajo</td>
+                    <td>Medio</td>
+                    <td>Medio</td>
+                    <td>Medio</td>
+                </tr>
+                <tr>
+                    <td><strong>Análisis Estadístico</strong></td>
+                    <td>Alto</td>
+                    <td>Bajo</td>
+                    <td>Bajo</td>
+                    <td>Bajo</td>
+                    <td>Bajo</td>
+                    <td><strong>Excelente</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Ecosistema de IA</strong></td>
+                    <td><strong>Excelente</strong></td>
+                    <td>Medio</td>
+                    <td>Alto</td>
+                    <td>Bajo</td>
+                    <td>Nulo</td>
+                    <td>Medio</td>
+                </tr>
+                <tr>
+                    <td><strong>Despliegue y Web</strong></td>
+                    <td>Alto</td>
+                    <td>Excelente</td>
+                    <td>Medio</td>
+                    <td>Alto</td>
+                    <td>Alto</td>
+                    <td>Bajo</td>
+                </tr>
+            </table>
+
+            <h3>🎯 Cierre y Decisiones Tomadas</h3>
+            <ul>
+                <li><strong>¿Son distintos el lenguaje de la aplicación y el de la IA?</strong> No, en este diseño <strong>emplearemos Python para ambas capas</strong>, unificando el código y evitando la complejidad de comunicar backends heterogéneos.</li>
+                <li><strong>Lenguaje principal elegido:</strong> <span class="badge">Python</span> para la gestión global y la capa de visión artificial / OCR.</li>
+                <li><strong>¿Por qué se descartan los demás?</strong> 
+                    <ul>
+                        <li><em>C++:</em> Descartado por su elevada complejidad y el tiempo excesivo de desarrollo que implicaría.</li>
+                        <li><em>R:</em> Descartado porque carece de la versatilidad de Python para integrar modelos de visión en una aplicación web en producción.</li>
+                        <li><em>Java y PHP:</em> Descartados por la falta de un ecosistema nativo sólido en librerías de IA y reconocimiento de matrículas.</li>
+                        <li><em>JavaScript:</em> Queda rezagado frente a Python en la disponibilidad de modelos de Deep Learning preentrenados.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Enlace al archivo de lógica JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
