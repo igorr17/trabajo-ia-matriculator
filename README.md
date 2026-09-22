@@ -1,8 +1,6 @@
 # trabajo-ia-matriculator
 # Trabajo Grupal RA1: Matriculator
 
-a
-
 ## 1. Organización del Grupo y Temporalización
 * **Integrantes del grupo:** 3 personas.
 * **Reparto de tareas:**
@@ -13,9 +11,38 @@ a
   * Semana 1: Elección de opción (Matriculator), extracción de Google Trends y definición teórica.
   * Semana 2: Comparativa de lenguajes, matriz de decisión y redacción del flujo técnico.
   * Semana 3: Creación de notebooks, desarrollo web en HTML, subida a Netlify y revisión final.
+ 
+## 2. Análisis de Google Trends (Paso 2)
+
+Para comparar los lenguajes de programación en base al interés de las personas, se usó Google Trends.
+Se compararon estos lenguajes:
+
+  * Python
+  * JavaScript
+  * Node.js
+  * R
+  * C++
+  * PHP
+  * Java
+
+La búsqueda se puso a nivel mundial, desde 2004 hasta septiembre de 2026, se usaron dos tipos de búsqueda: Google Web Search y YouTube Search.
+Estos resultados se descargaron en formato CSV y se guardaron en la carpeta data/:
+
+  * trends_web.csv
+  * trends_youtube.csv
+
+## 2.1   Resultados
+
+En la última fecha, 1 de septiembre de 2026, Python es el que mas esta interesado la gente de los demás lenguajes comparados.
+En Google Web Search, los valores fueron:
+
+Python:  | JavaScript:  | Java:  | Node.js:  | C++:  | R:  | PHP: 
+
+En YouTube Search también aparece Python como el lenguaje con mayor interés entre los lenguajes comparados.
+Así que Python es muy importante en las búsquedas relacionados con estos lenguajes, pero el interés de búsqueda no significa que sea el mejor para desarrollar IA. Para tomar esta decisión también veremos otros aspectos, como librerías de IA, fácil de aprender, el trabajo con datos, etc.
 
 ## 2. Enlaces de Interés
-* **URL de Netlify (Web estática):** *Pendiente de publicar*
+* **URL de Netlify (Web estática):** *FALTA PUBLICAR*
 * **Repositorio GitHub:** [GitHub - trabajo-ia-matriculator](https://github.com/igorr17/trabajo-ia-matriculator)
 
 ## 3. Preguntas Adicionales (Paso 5)
