@@ -4,9 +4,9 @@
 ## 1. Organización del Grupo y Temporalización
 * **Integrantes del grupo:** 3 personas.
 * **Reparto de tareas:**
-  * **Persona 1:** Definición del caso de uso (Paso 1) y diseño del flujo y pseudocódigo (Paso 3).
-  * **Persona 2:** Análisis de Google Trends, comparativa de lenguajes y matriz de decisión (Paso 2).
-  * **Persona 3:** Desarrollo de formatos de datos, notebooks de prueba, web estática y documentación (Pasos 4 y 5).
+  * **Byron:** Definición del caso de uso (Paso 1) y diseño del flujo y pseudocódigo (Paso 3).
+  * **Igor:** Análisis de Google Trends, comparativa de lenguajes y matriz de decisión (Paso 2).
+  * **Dani:** Desarrollo de formatos de datos, notebooks de prueba, web estática y documentación (Pasos 4 y 5).
 * **Temporalización:**
   * Semana 1: Elección de opción (Matriculator), extracción de Google Trends y definición teórica.
   * Semana 2: Comparativa de lenguajes, matriz de decisión y redacción del flujo técnico.
