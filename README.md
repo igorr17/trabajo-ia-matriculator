@@ -8,9 +8,9 @@
   * **Igor:** Análisis de Google Trends, comparativa de lenguajes y matriz de decisión (Paso 2).
   * **Dani:** Desarrollo de formatos de datos, notebooks de prueba, web estática y documentación (Pasos 4 y 5).
 * **Temporalización:**
-  * Semana 1: Elección de opción (Matriculator), extracción de Google Trends y definición teórica.
-  * Semana 2: Comparativa de lenguajes, matriz de decisión y redacción del flujo técnico.
-  * Semana 3: Creación de notebooks, desarrollo web en HTML, subida a Netlify y revisión final.
+  * 1h: Elección de opción (Matriculator), extracción de Google Trends y definición teórica.
+  * 1:30: Comparativa de lenguajes, matriz de decisión y redacción del flujo técnico.
+  * 3h: Creación de notebooks, desarrollo web en HTML, subida a Netlify y revisión final.
  
 ## 2. Análisis de Google Trends (Paso 2)
 
